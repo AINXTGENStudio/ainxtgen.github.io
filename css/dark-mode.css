@@ -1,0 +1,406 @@
+/* A.I. NXTGEN Studio — Dark Mode Overrides */
+/* Apply dark theme by default */
+
+:root {
+  --dark-bg: #0d0d14;
+  --dark-bg-secondary: #1a1a2e;
+  --dark-bg-tertiary: #16213e;
+  --dark-text: #e8e8f0;
+  --dark-text-muted: #a0a0b8;
+  --dark-accent: #6c5ce7;
+  --dark-accent-hover: #7d6ff0;
+  --dark-border: #2d2d44;
+}
+
+html {
+  background-color: var(--dark-bg) !important;
+}
+
+body,
+body.modal-open {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--dark-bg-secondary) !important;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.navbar-item,
+.navbar-link {
+  color: var(--dark-text) !important;
+  background-color: transparent !important;
+}
+
+.navbar-item:hover,
+.navbar-link:hover {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: var(--dark-accent) !important;
+}
+
+.navbar-burger span {
+  background-color: var(--dark-text) !important;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--dark-bg-secondary) !important;
+}
+
+.hero-body {
+  background-color: var(--dark-bg-secondary) !important;
+}
+
+.title,
+.subtitle,
+.hero-title {
+  color: var(--dark-text) !important;
+}
+
+.title.is-1,
+.title.is-2,
+.title.is-3 {
+  color: var(--dark-text) !important;
+}
+
+/* Content sections */
+.section {
+  background-color: var(--dark-bg) !important;
+}
+
+.box {
+  background-color: var(--dark-bg-secondary) !important;
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text) !important;
+}
+
+.box a {
+  color: var(--dark-accent) !important;
+}
+
+.box a:hover {
+  color: var(--dark-accent-hover) !important;
+}
+
+/* Cards */
+.card {
+  background-color: var(--dark-bg-secondary) !important;
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text) !important;
+}
+
+.card-header {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.card-header-title,
+.card-header-icon {
+  color: var(--dark-text) !important;
+}
+
+.card-content {
+  color: var(--dark-text) !important;
+}
+
+.card-footer {
+  border-top: 1px solid var(--dark-border);
+}
+
+.card-footer-item {
+  color: var(--dark-text-muted) !important;
+}
+
+.card-footer-item:hover {
+  color: var(--dark-accent) !important;
+}
+
+/* Text */
+p,
+li,
+span,
+.content {
+  color: var(--dark-text) !important;
+}
+
+.content li {
+  color: var(--dark-text) !important;
+}
+
+a {
+  color: var(--dark-accent) !important;
+}
+
+a:hover {
+  color: var(--dark-accent-hover) !important;
+}
+
+/* Muted text */
+.has-text-grey,
+.has-text-grey-light,
+.is-family-monospace {
+  color: var(--dark-text-muted) !important;
+}
+
+/* Dividers and borders */
+hr {
+  background-color: var(--dark-border) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--dark-border) !important;
+}
+
+/* Buttons */
+.button.is-primary {
+  background-color: var(--dark-accent) !important;
+  border-color: var(--dark-accent) !important;
+  color: white !important;
+}
+
+.button.is-primary:hover {
+  background-color: var(--dark-accent-hover) !important;
+  border-color: var(--dark-accent-hover) !important;
+}
+
+.button.is-outlined {
+  border-color: var(--dark-accent) !important;
+  color: var(--dark-accent) !important;
+}
+
+.button.is-outlined:hover {
+  background-color: var(--dark-accent) !important;
+  color: white !important;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-bg-secondary) !important;
+  border-top: 1px solid var(--dark-border);
+  padding: 3rem 1.5rem 6rem !important;
+}
+
+.footer p,
+.footer a {
+  color: var(--dark-text-muted) !important;
+}
+
+/* Tables */
+.table {
+  background-color: var(--dark-bg-secondary) !important;
+  color: var(--dark-text) !important;
+}
+
+.table th {
+  color: var(--dark-text) !important;
+  border-color: var(--dark-border) !important;
+}
+
+.table td {
+  border-color: var(--dark-border) !important;
+}
+
+.table tr:hover {
+  background-color: var(--dark-bg-tertiary) !important;
+}
+
+/* Tags */
+.tag {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: var(--dark-text) !important;
+}
+
+/* Dropdown */
+.dropdown-content {
+  background-color: var(--dark-bg-secondary) !important;
+  border: 1px solid var(--dark-border);
+}
+
+.dropdown-item {
+  color: var(--dark-text) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: var(--dark-accent) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb li + li::before {
+  color: var(--dark-text-muted) !important;
+}
+
+.breadcrumb a {
+  color: var(--dark-accent) !important;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--dark-bg-secondary) !important;
+  border-left: 1px solid var(--dark-border);
+}
+
+.sidebar a {
+  color: var(--dark-text) !important;
+}
+
+.sidebar a:hover {
+  color: var(--dark-accent) !important;
+}
+
+/* Block / Title divider */
+.block-title {
+  color: var(--dark-text) !important;
+  border-bottom-color: var(--dark-border) !important;
+}
+
+/* Post/Markdown content */
+.post-content p,
+.post-content li {
+  color: var(--dark-text) !important;
+}
+
+.post-meta {
+  color: var(--dark-text-muted) !important;
+}
+
+/* Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-body {
+    padding: 6rem 1.5rem !important;
+  }
+}
+
+/* Hero image dark overlay for readability */
+.hero-image-overlay {
+  background: linear-gradient(135deg, rgba(13, 13, 20, 0.85), rgba(26, 26, 46, 0.7));
+}
+
+/* Navbar transparent on hero */
+.navbar.is-transparent {
+  background-color: transparent !important;
+}
+
+/* Active nav item */
+.navbar-item.is-active {
+  color: var(--dark-accent) !important;
+}
+
+/* Notification */
+.notification {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: var(--dark-text) !important;
+}
+
+/* Code */
+code {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: #f1c40f !important;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: var(--dark-bg-tertiary) !important;
+  border: 1px solid var(--dark-border);
+}
+
+pre code {
+  background-color: transparent !important;
+  color: var(--dark-text) !important;
+}
+
+/* Form inputs */
+.input,
+.textarea,
+.select select {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-color: var(--dark-border) !important;
+  color: var(--dark-text) !important;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--dark-text-muted) !important;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+  border-color: var(--dark-accent) !important;
+  box-shadow: 0 0 0 0.125em rgba(108, 92, 231, 0.25) !important;
+}
+
+/* Menu / Nav list */
+.menu-label {
+  color: var(--dark-text-muted) !important;
+}
+
+.menu-list a {
+  color: var(--dark-text) !important;
+  border-radius: 4px;
+}
+
+.menu-list a:hover {
+  background-color: var(--dark-bg-tertiary) !important;
+  color: var(--dark-text) !important;
+}
+
+.menu-list a.is-active {
+  background-color: var(--dark-accent) !important;
+  color: white !important;
+}
+
+/* Progress */
+.progress {
+  background-color: var(--dark-bg-tertiary) !important;
+}
+
+.progress::-webkit-progress-bar {
+  background-color: var(--dark-bg-tertiary) !important;
+}
+
+.progress::-webkit-progress-value {
+  background-color: var(--dark-accent) !important;
+}
+
+/* Tabs */
+.tabs {
+  border-bottom-color: var(--dark-border) !important;
+}
+
+.tabs a {
+  color: var(--dark-text-muted) !important;
+  border-bottom-color: var(--dark-border) !important;
+}
+
+.tabs a:hover {
+  color: var(--dark-text) !important;
+  border-bottom-color: var(--dark-text-muted) !important;
+}
+
+.tabs li.is-active a {
+  color: var(--dark-accent) !important;
+  border-bottom-color: var(--dark-accent) !important;
+}

@@ -1,0 +1,83 @@
+# Site Settings
+lang: en
+title: A.I. NXTGEN Studio
+tagline: A.I. NXTGEN Studio
+email: contact@ainxtgen.xyz
+description: >
+  Exploring the Future of AI, Robotics, XR, and Emerging Technologies
+baseurl: ""
+url: "https://ainxtgen.github.io"
+permalink: pretty
+
+# Theme
+remote_theme: chrisrhymes/bulma-clean-theme
+
+# Dark mode settings
+theme_color: '#1a1a2e'
+fixed_navbar: top
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Plugins
+plugins:
+  - github-pages
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+# Exclude
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Sass
+sass:
+  style: compressed
+  source_dir: _sass
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: false
+      layout: page
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      show_sidebar: true
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  products:
+    output: true
+    layout: product
+    show_sidebar: false
+
+footer_menu: main_menu
+
+# Scholar
+scholar:
+  style: simple-ieee.csl
+  bibliography_list_tag: "ul.no-bullet"
+  bibliography_template: bibtemplate
