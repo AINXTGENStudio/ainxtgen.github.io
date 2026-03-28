@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+  
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  
+  <meta name="author" content="{{ site.author }}">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  
+  <!-- Bulma CSS (loaded from remote theme) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ============================================
+       A.I. NXTGEN STUDIO — DARK MODE THEME
+       ============================================ */
+    
+    :root {
+      --dark-bg: #0d0d14;
+      --dark-bg-secondary: #1a1a2e;
+      --dark-bg-tertiary: #16213e;
+      --dark-text: #e8e8f0;
+      --dark-text-muted: #a0a0b8;
+      --dark-accent: #6c5ce7;
+      --dark-accent-hover: #7d6ff0;
+      --dark-border: #2d2d44;
+      --dark-navbar: #0f0f1a;
+    }
+    
+    /* Base */
+    html { background-color: var(--dark-bg) !important; }
+    
+    body {
+      background-color: var(--dark-bg) !important;
+      color: var(--dark-text) !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      min-height: 100vh;
+    }
+    
+    /* Typography */
+    .title, .subtitle, h1, h2, h3, h4, h5, h6 {
+      color: var(--dark-text) !important;
+    }
+    
+    .has-text-grey, .has-text-grey-light {
+      color: var(--dark-text-muted) !important;
+    }
+    
+    a { color: var(--dark-accent) !important; transition: color 0.2s; }
+    a:hover { color: var(--dark-accent-hover) !important; }
+    
+    p, li, span { color: var(--dark-text) !important; }
+    
+    /* Navbar */
+    .navbar {
+      background-color: var(--dark-navbar) !important;
+      border-bottom: 1px solid var(--dark-border);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    
+    .navbar-item, .navbar-link {
+      color: var(--dark-text) !important;
+      background-color: transparent !important;
+      transition: all 0.2s;
+    }
+    
+    .navbar-item:hover, .navbar-link:hover {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: var(--dark-accent) !important;
+    }
+    
+    .navbar-burger span {
+      background-color: var(--dark-text) !important;
+    }
+    
+    .navbar-menu {
+      background-color: var(--dark-navbar) !important;
+    }
+    
+    /* Dropdown */
+    .navbar-item.has-dropdown:hover .navbar-link {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: var(--dark-accent) !important;
+    }
+    
+    .navbar-dropdown {
+      background-color: var(--dark-bg-secondary) !important;
+      border: 1px solid var(--dark-border) !important;
+      border-top: 1px solid var(--dark-border) !important;
+    }
+    
+    .navbar-dropdown .navbar-item {
+      color: var(--dark-text) !important;
+    }
+    
+    .navbar-dropdown .navbar-item:hover {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: var(--dark-accent) !important;
+    }
+    
+    /* Hero */
+    .hero {
+      background-color: var(--dark-bg-secondary) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-body {
+      background-color: var(--dark-bg-secondary) !important;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Hero animated background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(162, 155, 254, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 60% 80%, rgba(108, 92, 231, 0.08) 0%, transparent 40%);
+      z-index: 0;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(rgba(108, 92, 231, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108, 92, 231, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+    }
+    
+    .hero > .hero-body > .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-title {
+      color: var(--dark-text) !important;
+      text-shadow: 0 0 60px rgba(108, 92, 231, 0.4);
+    }
+    
+    .herosubtitle {
+      color: var(--dark-text-muted) !important;
+    }
+    
+    /* Sections */
+    .section {
+      background-color: var(--dark-bg) !important;
+    }
+    
+    .section.is-light {
+      background-color: var(--dark-bg-secondary) !important;
+    }
+    
+    /* Boxes / Cards */
+    .box, .card {
+      background-color: var(--dark-bg-secondary) !important;
+      border: 1px solid var(--dark-border);
+      color: var(--dark-text) !important;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    
+    .card:hover {
+      border-color: rgba(108, 92, 231, 0.4);
+      box-shadow: 0 4px 30px rgba(108, 92, 231, 0.15);
+    }
+    
+    .card-header {
+      background-color: var(--dark-bg-tertiary) !important;
+      border-bottom: 1px solid var(--dark-border);
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .card-header-title {
+      color: var(--dark-text) !important;
+    }
+    
+    .card-content { color: var(--dark-text) !important; }
+    .card-footer { border-top: 1px solid var(--dark-border); }
+    .card-footer-item { color: var(--dark-text-muted) !important; }
+    .card-footer-item:hover { color: var(--dark-accent) !important; }
+    
+    /* Buttons */
+    .button.is-primary {
+      background-color: var(--dark-accent) !important;
+      border-color: var(--dark-accent) !important;
+      color: white !important;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    
+    .button.is-primary:hover {
+      background-color: var(--dark-accent-hover) !important;
+      border-color: var(--dark-accent-hover) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
+    }
+    
+    .button.is-outlined {
+      border-color: var(--dark-accent) !important;
+      color: var(--dark-accent) !important;
+      background: transparent !important;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    
+    .button.is-outlined:hover {
+      background-color: var(--dark-accent) !important;
+      color: white !important;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark-bg-secondary) !important;
+      border-top: 1px solid var(--dark-border);
+      padding: 3rem 1.5rem 4rem !important;
+    }
+    
+    .footer p, .footer span, .footer a {
+      color: var(--dark-text-muted) !important;
+    }
+    
+    .footer a:hover { color: var(--dark-accent) !important; }
+    
+    /* Dividers */
+    hr {
+      background-color: var(--dark-border) !important;
+      height: 1px;
+    }
+    
+    /* Tables */
+    .table {
+      background-color: var(--dark-bg-secondary) !important;
+      color: var(--dark-text) !important;
+    }
+    
+    .table th { color: var(--dark-text) !important; border-color: var(--dark-border) !important; }
+    .table td { border-color: var(--dark-border) !important; }
+    .table tr:hover { background-color: var(--dark-bg-tertiary) !important; }
+    
+    /* Tags */
+    .tag {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: var(--dark-text) !important;
+      border: 1px solid var(--dark-border);
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb li+li::before { color: var(--dark-text-muted) !important; }
+    .breadcrumb a { color: var(--dark-accent) !important; }
+    .breadcrumb .is-active a { color: var(--dark-text) !important; }
+    
+    /* Menu */
+    .menu-label { color: var(--dark-text-muted) !important; }
+    .menu-list a {
+      color: var(--dark-text) !important;
+      border-radius: 6px;
+    }
+    .menu-list a:hover { background-color: var(--dark-bg-tertiary) !important; }
+    .menu-list a.is-active {
+      background-color: var(--dark-accent) !important;
+      color: white !important;
+    }
+    
+    /* Notification */
+    .notification {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: var(--dark-text) !important;
+    }
+    
+    /* Code */
+    code {
+      background-color: var(--dark-bg-tertiary) !important;
+      color: #f1c40f !important;
+      border-radius: 4px;
+      padding: 0.15em 0.4em;
+    }
+    
+    pre {
+      background-color: var(--dark-bg-tertiary) !important;
+      border: 1px solid var(--dark-border);
+      border-radius: 8px;
+    }
+    
+    pre code {
+      background-color: transparent !important;
+      color: var(--dark-text) !important;
+    }
+    
+    /* Forms */
+    .input, .textarea, .select select {
+      background-color: var(--dark-bg-tertiary) !important;
+      border-color: var(--dark-border) !important;
+      color: var(--dark-text) !important;
+      border-radius: 8px;
+    }
+    
+    .input::placeholder, .textarea::placeholder {
+      color: var(--dark-text-muted) !important;
+    }
+    
+    .input:focus, .textarea:focus, .select select:focus {
+      border-color: var(--dark-accent) !important;
+      box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2) !important;
+    }
+    
+    /* Tabs */
+    .tabs { border-bottom-color: var(--dark-border) !important; }
+    .tabs a { color: var(--dark-text-muted) !important; border-bottom-color: var(--dark-border) !important; }
+    .tabs a:hover { color: var(--dark-text) !important; border-bottom-color: var(--dark-text-muted) !important; }
+    .tabs li.is-active a {
+      color: var(--dark-accent) !important;
+      border-bottom-color: var(--dark-accent) !important;
+    }
+    
+    /* Progress */
+    .progress {
+      background-color: var(--dark-bg-tertiary) !important;
+      border-radius: 6px;
+    }
+    .progress::-webkit-progress-value { background-color: var(--dark-accent) !important; }
+    
+    /* Columns dividers */
+    .columns:last-child { margin-bottom: 0 !important; }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--dark-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--dark-border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--dark-text-muted); }
+    
+    /* Selection */
+    ::selection { background-color: rgba(108, 92, 231, 0.3) !important; }
+    
+    /* Status pulse animation */
+    .status-pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #00d26a;
+      animation: statusPulse 2s infinite;
+    }
+    
+    @keyframes statusPulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 210, 106, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 210, 106, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 210, 106, 0); }
+    }
+    
+    /* Neon glow text */
+    .glow-text {
+      text-shadow: 0 0 20px rgba(108, 92, 231, 0.5), 0 0 40px rgba(108, 92, 231, 0.3);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-body { padding: 6rem 1.5rem !important; }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <strong style="color: var(--dark-text);">🧠 A.I. NXTGEN</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      
+      <div id="mainNav" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">Home</a>
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="/team/team/">Team</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/team/team/">Our Team</a>
+              <a class="navbar-item" href="/openings/openings/">Join Us</a>
+            </div>
+          </div>
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Research</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/research/ai/">🤖 AI</a>
+              <a class="navbar-item" href="/research/bci/">🧠 BCI</a>
+              <a class="navbar-item" href="/research/robotics/">🦾 Robotics</a>
+              <a class="navbar-item" href="/research/xr/">🥽 XR</a>
+              <a class="navbar-item" href="/research/solar/">☀️ Solar</a>
+            </div>
+          </div>
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Datasets</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/datasets/benchmarks/">📊 AI Benchmarks</a>
+              <a class="navbar-item" href="/datasets/bci/">🧠 BCI Data</a>
+              <a class="navbar-item" href="/datasets/robotics/">🦾 Robotics Data</a>
+            </div>
+          </div>
+          
+          <a class="navbar-item" href="/publications/pubs/">Publications</a>
+          <a class="navbar-item" href="/contact/">Contact</a>
+        </div>
+        
+        <div class="navbar-end">
+          <span class="navbar-item">
+            <span class="status-pulse"></span>
+            <span style="color: var(--dark-text-muted); font-size: 0.8rem; margin-left: 6px;">24/7 Active</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Spacer for fixed navbar -->
+  <div style="padding-top: 52px;"></div>
+  
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <h4 class="title is-5" style="color: var(--dark-text) !important;">
+            🧠 A.I. NXTGEN Studio
+          </h4>
+          <p style="color: var(--dark-text-muted) !important;">
+            Exploring the Future of AI, Robotics, XR, and Emerging Technologies.
+            <br><br>
+            <span class="status-pulse" style="vertical-align: middle;"></span>
+            <span style="color: var(--dark-text-muted);"> Lab Active 24/7</span>
+          </p>
+        </div>
+        <div class="column is-4">
+          <h4 class="title is-5" style="color: var(--dark-text) !important;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="/research/research/" style="color: var(--dark-text-muted) !important;">Research</a></li>
+            <li><a href="/team/team/" style="color: var(--dark-text-muted) !important;">Team</a></li>
+            <li><a href="/publications/pubs/" style="color: var(--dark-text-muted) !important;">Publications</a></li>
+            <li><a href="/contact/" style="color: var(--dark-text-muted) !important;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="column is-4">
+          <h4 class="title is-5" style="color: var(--dark-text) !important;">Connect</h4>
+          <p style="color: var(--dark-text-muted) !important;">
+            <a href="https://github.com/ainxtgen" style="color: var(--dark-text-muted) !important;">GitHub</a> · 
+            <a href="https://twitter.com/ainxtgen" style="color: var(--dark-text-muted) !important;">Twitter/X</a> · 
+            <a href="https://linkedin.com/company/ainxtgen" style="color: var(--dark-text-muted) !important;">LinkedIn</a>
+          </p>
+          <p style="color: var(--dark-text-muted) !important; margin-top: 0.5rem;">
+            Email: contact@ainxtgen.xyz
+          </p>
+        </div>
+      </div>
+      <hr>
+      <p style="text-align: center; color: var(--dark-text-muted) !important;">
+        © 2026 A.I. NXTGEN Studio — All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+  
+  <!-- Bulma navbar burger script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = document.getElementById(el.dataset.target);
+            el.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

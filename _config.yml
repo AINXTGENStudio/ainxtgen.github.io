@@ -1,34 +1,29 @@
 # Site Settings
 lang: en
 title: A.I. NXTGEN Studio
-tagline: A.I. NXTGEN Studio
+tagline: Exploring the Future of AI, Robotics, XR, and Emerging Technologies
 email: contact@ainxtgen.xyz
 description: >
-  Exploring the Future of AI, Robotics, XR, and Emerging Technologies
+  A.I. NXTGEN Studio — A multidisciplinary research laboratory at the frontier of AI, 
+  robotics, brain-computer interfaces, extended reality, and sustainable energy.
 baseurl: ""
 url: "https://ainxtgen.github.io"
 permalink: pretty
 
-# Theme
-remote_theme: chrisrhymes/bulma-clean-theme
+# Disable remote theme - using custom layouts
+# remote_theme: chrisrhymes/bulma-clean-theme
 
-# Dark mode settings
-theme_color: '#1a1a2e'
-fixed_navbar: top
-
-# Pagination
+# Paginate
 paginate: 5
 paginate_path: "/blog/page:num"
 
 # Plugins
 plugins:
-  - github-pages
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
   - kramdown-parser-gfm
-  - jekyll-redirect-from
 
 # Exclude
 exclude:
@@ -36,10 +31,7 @@ exclude:
   - clean-theme.gemspec
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
 
 # Sass
 sass:
@@ -53,31 +45,14 @@ defaults:
       path: ""
       type: "pages"
     values:
-      show_sidebar: false
       layout: page
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: post
-      show_sidebar: true
+      layout: page
 
 # Markdown
 markdown: kramdown
 highlighter: rouge
-
-# Collections
-collections:
-  products:
-    output: true
-    layout: product
-    show_sidebar: false
-
-footer_menu: main_menu
-
-# Scholar
-scholar:
-  style: simple-ieee.csl
-  bibliography_list_tag: "ul.no-bullet"
-  bibliography_template: bibtemplate
