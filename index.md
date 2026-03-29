@@ -3,7 +3,7 @@ title: Home
 layout: page
 ---
 
-<!-- Hero Section -->
+<!-- Hero Section - Updated -->
 <section class="hero is-large">
   <div class="hero-body">
     <div class="container has-text-centered">
