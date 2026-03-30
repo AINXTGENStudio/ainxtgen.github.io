@@ -8,7 +8,7 @@ layout: page
   <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title is-1 glow-text" style="color: #e8e8f0 !important; font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">
-        <img src="https://raw.githubusercontent.com/AINXTGENStudio/ainxtgen.github.io/main/logo.png" alt="A.I. NXTGEN Studio" style="height:1.1em;vertical-align:middle;margin-right:0.3em;"> A.I. NXTGEN Studio
+        <img src="/logo.png" alt="A.I. NXTGEN Studio" style="height:80px;vertical-align:middle;margin-right:0.5rem;">
       </p>
       <p class="subtitle is-3 herosubtitle" style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 2rem auto;">
         Exploring the Future of <strong style="color: #6c5ce7;">AI</strong>, 
