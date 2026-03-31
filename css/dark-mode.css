@@ -2,14 +2,14 @@
 /* Apply dark theme by default */
 
 :root {
-  --dark-bg: #0d0d14;
-  --dark-bg-secondary: #1a1a2e;
-  --dark-bg-tertiary: #16213e;
-  --dark-text: #e8e8f0;
-  --dark-text-muted: #a0a0b8;
-  --dark-accent: #6c5ce7;
-  --dark-accent-hover: #7d6ff0;
-  --dark-border: #2d2d44;
+  --dark-bg: #000000;
+  --dark-bg-secondary: #0a0a0a;
+  --dark-bg-tertiary: #111111;
+  --dark-text: #ffffff;
+  --dark-text-muted: #cccccc;
+  --dark-accent: #00f3ff;
+  --dark-accent-hover: #00d4ff;
+  --dark-border: #222222;
 }
 
 html {
@@ -316,19 +316,9 @@ hr {
 /* Code */
 code {
   background-color: var(--dark-bg-tertiary) !important;
-  color: #f1c40f !important;
+  color: var(--dark-accent) !important;
   padding: 0.2em 0.4em;
   border-radius: 4px;
-}
-
-pre {
-  background-color: var(--dark-bg-tertiary) !important;
-  border: 1px solid var(--dark-border);
-}
-
-pre code {
-  background-color: transparent !important;
-  color: var(--dark-text) !important;
 }
 
 /* Form inputs */
@@ -349,7 +339,7 @@ pre code {
 .textarea:focus,
 .select select:focus {
   border-color: var(--dark-accent) !important;
-  box-shadow: 0 0 0 0.125em rgba(108, 92, 231, 0.25) !important;
+  box-shadow: 0 0 0 0.125em rgba(0, 243, 255, 0.25) !important;
 }
 
 /* Menu / Nav list */
