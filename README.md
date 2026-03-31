@@ -121,7 +121,7 @@ Edit `css/dark-mode.css` — modify the CSS variables at the top:
 ```css
 :root {
   --dark-bg: #0d0d14;
-  --dark-accent: #6c5ce7;
+  --dark-accent: #00b4ff;
   /* etc. */
 }
 ```
