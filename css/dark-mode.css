@@ -7,8 +7,8 @@
   --dark-bg-tertiary: #16213e;
   --dark-text: #e8e8f0;
   --dark-text-muted: #a0a0b8;
-  --dark-accent: #6c5ce7;
-  --dark-accent-hover: #7d6ff0;
+  --dark-accent: #00b4ff;
+  --dark-accent-hover: #33c5ff;
   --dark-border: #2d2d44;
 }
 
@@ -349,7 +349,7 @@ pre code {
 .textarea:focus,
 .select select:focus {
   border-color: var(--dark-accent) !important;
-  box-shadow: 0 0 0 0.125em rgba(108, 92, 231, 0.25) !important;
+  box-shadow: 0 0 0 0.125em rgba(0, 180, 255, 0.25) !important;
 }
 
 /* Menu / Nav list */
