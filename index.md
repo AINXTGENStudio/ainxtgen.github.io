@@ -11,11 +11,11 @@ layout: page
         <img src="/logo.png" alt="A.I. NXTGEN Studio Logo" style="height:80px;vertical-align:middle;margin-right:0.5rem;"> A.I. NXTGEN Studio
       </p>
       <p class="subtitle is-3 herosubtitle" style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 2rem auto;">
-        Exploring the Future of <strong style="color: #6c5ce7;">AI</strong>, 
-        <strong style="color: #6c5ce7;">Robotics</strong>, 
-        <strong style="color: #6c5ce7;">BCI</strong>, 
-        <strong style="color: #6c5ce7;">XR</strong>, and 
-        <strong style="color: #6c5ce7;">Emerging Technologies</strong>
+        Exploring the Future of <strong style="color: #00b4ff;">AI</strong>, 
+        <strong style="color: #00b4ff;">Robotics</strong>, 
+        <strong style="color: #00b4ff;">BCI</strong>, 
+        <strong style="color: #00b4ff;">XR</strong>, and 
+        <strong style="color: #00b4ff;">Emerging Technologies</strong>
       </p>
       <p style="color: #a0a0b8 !important; margin-bottom: 2.5rem;">
         A multidisciplinary research laboratory — <span class="status-pulse"></span> Active 24/7
@@ -35,7 +35,7 @@ layout: page
       <div class="column is-8 has-text-centered">
         <h2 class="title is-2" style="color: #e8e8f0 !important; margin-bottom: 1.5rem;">About Us</h2>
         <p style="color: #e8e8f0 !important; font-size: 1.15rem; line-height: 1.8;">
-          Welcome to <strong style="color: #6c5ce7;">A.I. NXTGEN Studio</strong> — a multidisciplinary research laboratory at the frontier of artificial intelligence, robotics, brain-computer interfaces, extended reality, and sustainable energy.
+          Welcome to <strong style="color: #00b4ff;">A.I. NXTGEN Studio</strong> — a multidisciplinary research laboratory at the frontier of artificial intelligence, robotics, brain-computer interfaces, extended reality, and sustainable energy.
         </p>
         <p style="color: #a0a0b8 !important; font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
           We are a 24/7 active research collective constantly building, testing, and pushing the boundaries of what's possible with emerging technologies. Our mission is to explore, create, and share transformative solutions that shape the future.
